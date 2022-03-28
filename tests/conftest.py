@@ -9,7 +9,15 @@ def setup(request):
     request.cls.driver=driver
     yield
     driver.close()
-
+@pytest.fixture(scope='class')
+def setupHome(request):
+    global driver
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+    driver.get('https://www.shopify.com/')
+    driver.maximize_window()
+    request.cls.driver = driver
+    yield
+    driver.close()
 
 
 @pytest.fixture(scope='class')
