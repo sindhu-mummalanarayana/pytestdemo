@@ -1,0 +1,95 @@
+C:\Users\supri\PycharmProjects\pytestdemo>py.test
+================================================= test session starts =================================================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: C:\Users\supri\PycharmProjects\pytestdemo
+plugins: html-3.1.1, metadata-1.11.0
+collected 3 items
+
+tests\test_demo1.py
+DevTools listening on ws://127.0.0.1:51280/devtools/browser/94b5325d-80cd-48aa-ace6-73b30f27538f
+.                                                                                            [ 33%]
+tests\test_demo2.py
+DevTools listening on ws://127.0.0.1:51383/devtools/browser/664fbf00-237c-48b9-aae1-a7b0c6581b92
+.                                                                                            [ 66%]
+tests\test_demo3.py
+DevTools listening on ws://127.0.0.1:51430/devtools/browser/b32d0235-50fd-46b5-a6b4-15cfd660bb49
+[17432:16284:0328/180329.508:ERROR:device_event_log_impl.cc(214)] [18:03:29.509] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[17432:16284:0328/180329.508:ERROR:device_event_log_impl.cc(214)] [18:03:29.509] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+.                                                                                            [100%]
+
+================================================== warnings summary ===================================================
+tests/test_demo1.py::Test0ne::test_TC01_ShopifyHomepage_LoginButton
+tests/test_demo3.py::Test0ne::test_TC01_ShopifyHomepage_LoginButton
+  C:\Users\supri\PycharmProjects\pytestdemo\tests\conftest.py:15: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+  C:\Users\supri\PycharmProjects\pytestdemo\tests\conftest.py:6: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================================== 3 passed, 3 warnings in 27.19s ============================================
+
+C:\Users\supri\PycharmProjects\pytestdemo>py.test -k signup
+================================================= test session starts =================================================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: C:\Users\supri\PycharmProjects\pytestdemo
+plugins: html-3.1.1, metadata-1.11.0
+collected 3 items / 2 deselected / 1 selected
+
+tests\test_demo2.py
+DevTools listening on ws://127.0.0.1:51556/devtools/browser/823aec3a-7952-41fc-b5b0-48a15f8b1398
+.                                                                                            [100%]
+
+================================================== warnings summary ===================================================
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+  C:\Users\supri\PycharmProjects\pytestdemo\tests\conftest.py:6: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+===================================== 1 passed, 2 deselected, 1 warning in 5.18s ======================================
+
+C:\Users\supri\PycharmProjects\pytestdemo>py.test -k signup -v
+================================================= test session starts =================================================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Users\supri\AppData\Local\Programs\Python\Python310\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.10.0', 'Platform': 'Windows-10-10.0.22000-SP0', 'Packages': {'pytest': '6.2.5', 'py': '1.11.0', 'pluggy': '1.0.0'}, 'Plugins': {'html': '3.1.1', 'metadata': '1.11.0'}}
+rootdir: C:\Users\supri\PycharmProjects\pytestdemo
+plugins: html-3.1.1, metadata-1.11.0
+collected 3 items / 2 deselected / 1 selected
+
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+DevTools listening on ws://127.0.0.1:51621/devtools/browser/640d04b3-14bb-4806-bd73-9d705f0d5218
+PASSED                                                 [100%]
+
+================================================== warnings summary ===================================================
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+  C:\Users\supri\PycharmProjects\pytestdemo\tests\conftest.py:6: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+===================================== 1 passed, 2 deselected, 1 warning in 5.28s ======================================
+
+C:\Users\supri\PycharmProjects\pytestdemo>py.test -k signup -v -s
+================================================= test session starts =================================================
+platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Users\supri\AppData\Local\Programs\Python\Python310\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.10.0', 'Platform': 'Windows-10-10.0.22000-SP0', 'Packages': {'pytest': '6.2.5', 'py': '1.11.0', 'pluggy': '1.0.0'}, 'Plugins': {'html': '3.1.1', 'metadata': '1.11.0'}}
+rootdir: C:\Users\supri\PycharmProjects\pytestdemo
+plugins: html-3.1.1, metadata-1.11.0
+collected 3 items / 2 deselected / 1 selected
+
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+DevTools listening on ws://127.0.0.1:51683/devtools/browser/29847d21-7ae0-460a-bc73-f351c93e2192
+PASSED
+
+================================================== warnings summary ===================================================
+tests/test_demo2.py::Testtwo::test_Signup_createShopifyID
+  C:\Users\supri\PycharmProjects\pytestdemo\tests\conftest.py:6: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+    driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+===================================== 1 passed, 2 deselected, 1 warning in 5.46s ======================================
+
+C:\Users\supri\PycharmProjects\pytestdemo>
+
