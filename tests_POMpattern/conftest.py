@@ -23,3 +23,7 @@ def setupHome(request):
 @pytest.fixture(scope='class')
 def testdata():
     return ("Sindhu","MN","sindhu.suprith@gmail.com","dummy1234@@","dummy1234@@")
+
+@pytest.fixture(scope='class')
+def testdata_forfreetrail():
+    return ("sindhu.suprith@gmail.com")
