@@ -3,10 +3,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from PageObjects.SignUpPage import SignUpPage
+
+
 @pytest.mark.usefixtures("setup")
 @pytest.mark.usefixtures("testdata")
 class Testtwo:
-    def test_Signup_createShopifyID(self,testdata):
+    @pytest.mark.skip
+    @pytest.mark.smoke
+    def test_SignupPage_createShopifyID(self,testdata):
         self.driver.find_element(By.ID, 'account_first_name').send_keys(testdata[0])
         self.driver.find_element(By.ID, 'account_last_name').send_keys(testdata[1])
         self.driver.find_element(By.ID, 'account_email').send_keys(testdata[2])
@@ -17,3 +22,10 @@ class Testtwo:
         assert create_ShopifyID_button.is_enabled()
 
 
+    def test_SignUpPage_check_the_Login_functionality_from_signup_page(self):
+        signuppage=SignUpPage(self.driver)
+        signuppage.LogIn()
+        title=self.driver.title
+        print(title)
+        assert "Log in - Shopify" in title
+        print()
