@@ -11,6 +11,7 @@ from PageObjects.ShopifyHomePage import ShopifyHomePage
 @pytest.mark.usefixtures("setupHome")
 class Test0ne:
     @pytest.mark.smoke
+    @pytest.mark.skipif
     def test_TC01_ShopifyHomepage_LoginButton_navigation_to_signup_page(self):
         shopifyhomepage=ShopifyHomePage(self.driver)
         loginpage=shopifyhomepage.LogInButton()
