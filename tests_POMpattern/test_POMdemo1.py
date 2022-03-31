@@ -12,7 +12,7 @@ class Test0ne:
         shopifyhomepage1 = ShopifyHomePage(self.driver)
         email=shopifyhomepage1.getEmailAddress_ForFreeTrail().send_keys(testdata_forfreetrail)
 
-
+    @pytest.mark.smoke
     def test_TC01_ShopifyHomepage_LoginButton(self):
         shopifyhomepage=ShopifyHomePage(self.driver)
         shopifyhomepage.LogInButton()
