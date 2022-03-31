@@ -23,7 +23,7 @@ class Testtwo:
         ShopifyID_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[@type="submit"]')))
         create_ShopifyID_button = self.driver.find_element(By.XPATH, '//button[@type="submit"]')
         assert create_ShopifyID_button.is_enabled()
-
+    @pytest.mark.smoke
     def test_SignUpPage_check_the_Login_functionality_from_signup_page(self):
         signuppage = SignUpPage(self.driver)
         signuppage.LogIn()
