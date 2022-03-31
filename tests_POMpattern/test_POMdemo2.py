@@ -19,4 +19,3 @@ class Testtwo:
         create_ShopifyID_button = self.driver.find_element(By.XPATH, '//button[@type="submit"]')
         assert create_ShopifyID_button.is_enabled()
 
-)
