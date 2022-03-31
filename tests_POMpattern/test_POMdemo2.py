@@ -11,7 +11,7 @@ from PageObjects.SignUpPage import SignUpPage
 @pytest.mark.usefixtures("setup")
 @pytest.mark.usefixtures("testdata")
 class Testtwo:
-    @pytest.mark.skip
+
     @pytest.mark.smoke
     def test_SignupPage_createShopifyID(self,testdata):
         self.driver.find_element(By.ID, 'account_first_name').send_keys(testdata[0])
@@ -24,11 +24,3 @@ class Testtwo:
         create_ShopifyID_button = self.driver.find_element(By.XPATH, '//button[@type="submit"]')
         assert create_ShopifyID_button.is_enabled()
 
-
-    def test_SignUpPage_check_the_Login_functionality_from_signup_page(self):
-        signuppage=SignUpPage(self.driver)
-        signuppage.LogIn()
-        title=self.driver.title
-        print(title)
-        assert "Log in - Shopify" in title
-        print()
